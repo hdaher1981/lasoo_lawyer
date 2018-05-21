@@ -10,10 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_21_153738) do
+ActiveRecord::Schema.define(version: 2018_05_21_164941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "interviews", force: :cascade do |t|
+    t.date "date"
+    t.time "time"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "confirmation"
+    t.index ["user_id"], name: "index_interviews_on_user_id"
+  end
+
+  create_table "lawyer_infos", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "current_firm"
+    t.string "job_title"
+    t.integer "pqe"
+    t.string "university"
+    t.float "degree_classification"
+    t.integer "expected_salary"
+    t.string "job_status"
+    t.string "practice_area"
+    t.string "firm_type"
+    t.string "interests"
+    t.string "post_code"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_lawyer_infos_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,8 +58,11 @@ ActiveRecord::Schema.define(version: 2018_05_21_153738) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "lawyer"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "interviews", "users"
+  add_foreign_key "lawyer_infos", "users"
 end
