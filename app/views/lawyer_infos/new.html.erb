@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <h1>Lawyers</h1>
+    <h2>Sign Up</h2>
+    <div class="simple">
+      <%= simple_form_for(@lawyerinfo) do |f| %>
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :current_firm, collection: ["magic circle", "silver circle", "US firm", "Top 30 City"]%>
+        <%= f.input :job_title, collection: ["Junior Associate", "Mid-Level Associate", "Senior Associate"] %>
+        <%= f.input :pqe %>
+        <%= f.input :university %>
+        <%= f.input :degree_classification, collection: ["1st", "2.1", "2.2"] %>
+        <%= f.input :expected_salary %>
+        <%= f.input :job_status, collection: ["Actively seeking", "Could be tempted", "Not actively seeking"] %>
+        <%= f.input :practice_area, collection: ["Litigation", "Finance", "Corporate", "Employment"] %>
+        <%= f.input :firm_type, collection: ["magic circle", "silver circle", "US firm", "Top 30 City"] %>
+        <%= f.input :interests %>
+        <%= f.input :post_code %>
+        <%= f.submit :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
