@@ -1,0 +1,47 @@
+// CARD
+
+.card {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 2px solid #E7E7E7;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 25px 50px;
+}
+
+.card-information {
+  flex: 1 0 auto;
+}
+
+.card-info-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-info-title {
+  margin-right: 60px;
+}
+
+.card-info-tags {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .tag {
+    margin-right: 20px;
+    padding: 14px 17px;
+    background-color: #1C144C;
+    color: white;
+    border-radius: 60px
+  }
+}
+
+.card-info-bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  span {
+    margin-right: 50px;
+  }
+}
