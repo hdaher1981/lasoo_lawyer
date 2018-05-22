@@ -1,2 +1,6 @@
-<h1>LawyerInfos#edit</h1>
-<p>Find me in app/views/lawyer_infos/edit.html.erb</p>
+<h1>Editing Lawyer Info</h1>
+
+<%= render 'form', lawyerinfo: @lawyerinfo %>
+
+<%= link_to 'Show', @lawyerinfo %>
+<%= link_to 'Back', lawyer_infos_path %>
