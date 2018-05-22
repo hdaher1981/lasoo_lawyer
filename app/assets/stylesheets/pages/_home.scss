@@ -1,10 +1,14 @@
 // Specific CSS for your home-page
 
+h1 {
+  margin-top: 0px;
+}
+
 .home-headers {
   font-family: 'Rokkitt', serif;
   position: relative;
   margin-left: 100px;
-  margin-top: 0px;
+  top: 100px;
 }
 
 .home-headers h1 {
@@ -13,6 +17,7 @@
 
 .home-headers h3 {
   color: #73F0D6;
+  margin: 0px;
 }
 
 .fab {

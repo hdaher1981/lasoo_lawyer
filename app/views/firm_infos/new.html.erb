@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <h1>Law Firm</h1>
+    <h2>Sign Up</h2>
+    <div class="simple">
+      <%= simple_form_for(@firm_info) do |f| %>
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :firm_name %>
+        <%= f.input :job_title %>
+        <%= f.submit :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
