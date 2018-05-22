@@ -3,7 +3,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def after_sign_up_path_for(resource)
     if resource.lawyer
-      root_path
+      new_lawyer_info_path
     else
       root_path
     end
