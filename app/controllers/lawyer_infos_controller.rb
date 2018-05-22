@@ -1,5 +1,5 @@
 class LawyerInfosController < ApplicationController
-  before_action :set_lawyerinfo, only: [:show, :destroy]
+  before_action :set_lawyerinfo, only: [:show, :edit, :destroy, :update]
   def index
   end
 
@@ -15,17 +15,25 @@ class LawyerInfosController < ApplicationController
 
   def create
     @lawyerinfo = LawyerInfo.new(lawyerinfo_params)
+    @lawyerinfo.user = current_user
     if @lawyerinfo.save
-    redirect_to new_lawyer_info_path(@lawyerinfo)
+      redirect_to lawyer_info_path(@lawyerinfo)
     else
-    render :new
+      render :new
     end
   end
 
   def update
+    if @lawyerinfo.update(lawyerinfo_params)
+      redirect_to lawyer_info_path(@lawyerinfo)
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @lawyerinfo.destroy
+    redirect_to lawyer_infos_path, notice: 'Profile was successfully deleted.'
   end
 
   private
@@ -35,10 +43,6 @@ class LawyerInfosController < ApplicationController
   end
 
   def lawyerinfo_params
-    params.require(:lawyerinfo).permit(:first_name, :last_name, :current_firm, :job_title, :pqe, :university, :degree_classification, :expected_salary, :job_status, :practice_area, :firm_type, :interests, :post_code)
+    params.require(:lawyer_info).permit(:first_name, :last_name, :current_firm, :job_title, :pqe, :university, :degree_classification, :expected_salary, :job_status, :practice_area, :firm_type, :interests, :post_code)
   end
-
-
-
-
 end

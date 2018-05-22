@@ -1,2 +1,24 @@
-<h1>LawyerInfos#show</h1>
-<p>Find me in app/views/lawyer_infos/show.html.erb</p>
+<h1>Lawyer Information</h1>
+
+<div class="showbox">
+<ul>
+<li>Email: <%= @lawyerinfo.user.email %></li>
+<li>First Name: <%= @lawyerinfo.first_name %></li>
+<li>Last Name: <%= @lawyerinfo.last_name %></li>
+<li>Current Firm: <%= @lawyerinfo.current_firm %></li>
+<li>Job Title: <%= @lawyerinfo.job_title %></li>
+<li>PQE: <%= @lawyerinfo.pqe %> years</li>
+<li>University: <%= @lawyerinfo.university %></li>
+<li>Degree Classification: <%= @lawyerinfo.degree_classification %>(HONS) </li>
+<li>Expected Salary: £ <%= @lawyerinfo.expected_salary %></li>
+<li>Job status: <%= @lawyerinfo.job_status %></li>
+<li>Practice area: <%= @lawyerinfo.practice_area %></li>
+<li>Target Firm Type: <%= @lawyerinfo.firm_type %></li>
+<li>Interests: <%= @lawyerinfo.interests %></li>
+<li>Post Code: <%= @lawyerinfo.post_code %></li>
+</ul>
+</div>
+
+<p>  <%= link_to "Delete", lawyer_info_path(@lawyerinfo), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary" %></p>
+
+<p>  <%= link_to "Edit", edit_lawyer_info_path, class: "btn btn-primary" %></p>
