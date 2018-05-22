@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :interviews, only: [:edit, :index, :update, :destroy, :show ]
-  devise_for :users
   root to: "pages#home"
   resources :pages
 
