@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
   resources :interviews, only: [:edit, :index, :update, :destroy, :show ]
-  resources :lawyer_infos, only: [:index, :edit, :show, :update, :destroy]
-
+  resources :lawyer_infos
   devise_for :users, controllers: { registrations: "registrations" }
-
   root to: "pages#home"
   resources :pages
 
