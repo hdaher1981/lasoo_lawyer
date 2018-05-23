@@ -1,5 +1,7 @@
 class LawyerInfo < ApplicationRecord
   belongs_to :user
+  mount_uploader :cv, CvUploader
+
   validates :first_name, presence: true
   validates :last_name,  presence: true
   validates :pqe, presence: true
