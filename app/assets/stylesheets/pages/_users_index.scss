@@ -1,0 +1,26 @@
+.wrapper {
+  background-color: #ECECEC;
+  margin: 0px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: top;
+  width: 1310px;
+  margin: auto;
+}
+
+.cards-container {
+  flex: 1 0 auto;
+}
+
+.filter-container {
+  width: 450px;
+  height: 900px;
+  border: 2px solid #E7E7E7;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 25px 50px;
+  background-color: white;
+}
