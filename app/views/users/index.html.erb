@@ -26,7 +26,10 @@
               <span><%= user.lawyer_info.university %></span>
             </div>
           </div>
-          <%= link_to "More info", user_path(user), class: "btn btn-primary"  %>
+          <div class="btn-more-info">
+            <%= link_to "More info" , user_path(user) %>
+            <%= image_tag 'right_arrow_white.png', class: "arrow", width: 28, height: 59 %>
+          </div>
         </div>
       <% end %>
     </div>
