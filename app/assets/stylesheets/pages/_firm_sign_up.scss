@@ -1,13 +1,31 @@
 .simple {
   color: #1C144C;
-  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+  background: #73F0D6;
   border-style: solid;
   border-width: 2px;
   border-color: #73F0D6;
   padding: 20px;
   border-radius: 15px;
-  margin-top: 20px;
+}
 
+
+.container_lawyer_info{
+  margin: 0 auto;
+  text-align: center;
+  padding:20px;
+}
+
+
+.lawyer_new_heading{
+  margin: 0 auto;
+  width: 50%;
+}
+
+
+.wrapper_lawyer_new {
+  margin-top: 20px;
 }
 
 
