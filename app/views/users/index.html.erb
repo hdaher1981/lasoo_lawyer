@@ -1,28 +1,38 @@
-<div class="container">
 
-  <% @users.each do |user| %>
-
-    <div class="card">
-      <div class="card-information">
-        <div class="card-info-top">
-          <div class="card-info-title">
-            <h4><%= user.lawyer_info.job_title %></h4>
-            <p><%= user.lawyer_info.practice_area %></p>
-          </div>
-          <div class="card-info-tags">
-            <span class="tag"><%= user.lawyer_info.job_status %></span>
-            <span class="tag"><%= user.lawyer_info.expected_salary %></span>
-          </div>
-        </div>
-        <div class="card-info-bottom">
-          <span>PQE: <%= user.lawyer_info.pqe %></span>
-          <span><%= user.lawyer_info.current_firm %></span>
-          <span><%= user.lawyer_info.university %></span>
-        </div>
-      </div>
-      <%= link_to "More info", user_path(user), class: "btn btn-primary"  %>
+<div class="wrapper">
+  <div class="main-container">
+    <div class="filter-container">
     </div>
 
-  <% end %>
 
+
+    <div class="cards-container">
+      <% @users.each do |user| %>
+        <div class="card">
+          <div class="card-information">
+            <div class="card-info-top">
+              <div class="card-info-title">
+                <h4><%= user.lawyer_info.job_title %></h4>
+                <p><%= user.lawyer_info.practice_area %></p>
+              </div>
+              <div class="card-info-tags">
+                <span class="tag"><%= user.lawyer_info.job_status %></span>
+                <span class="tag"><%= user.lawyer_info.expected_salary %></span>
+              </div>
+            </div>
+            <div class="card-info-bottom">
+              <span>PQE: <%= user.lawyer_info.pqe %></span>
+              <span><%= user.lawyer_info.current_firm %></span>
+              <span><%= user.lawyer_info.university %></span>
+            </div>
+          </div>
+          <%= link_to "More info", user_path(user), class: "btn btn-primary"  %>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
 </div>
+
+
+
