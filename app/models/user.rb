@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :interviews
-
+  has_one :firm_info
   has_one :lawyer_info
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
