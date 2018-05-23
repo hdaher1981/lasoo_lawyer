@@ -15,7 +15,7 @@ class FirmInfosController < ApplicationController
     @firm_info = FirmInfo.new(firm_info_params)
     @firm_info.user = current_user
     if @firm_info.save
-      redirect_to firm_infos_path
+      redirect_to users_path(@user)
     else
       render :new
     end
