@@ -6,9 +6,13 @@ h1 {
 
 .home-headers {
   font-family: 'Rokkitt', serif;
-  position: relative;
+  position: aboslute;
   margin-left: 100px;
   top: 100px;
+}
+
+#new_user {
+  margin-top: 20px;
 }
 
 .home-headers h1 {
@@ -25,8 +29,8 @@ h1 {
 }
 
 .background-image-home {
-  background-image: url(background2);
-  object-fit: cover;
+  background-image: url(../images/background2);
+  background-image: cover;
   background-repeat: no-repeat center center fixed;
   background-position:50% 50%;
   background-size:cover;
