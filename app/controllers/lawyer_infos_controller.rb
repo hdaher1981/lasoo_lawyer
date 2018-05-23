@@ -43,6 +43,6 @@ class LawyerInfosController < ApplicationController
   end
 
   def lawyerinfo_params
-    params.require(:lawyer_info).permit(:first_name, :last_name, :current_firm, :job_title, :pqe, :university, :degree_classification, :expected_salary, :job_status, :practice_area, :firm_type, :interests, :post_code)
+    params.require(:lawyer_info).permit(:first_name, :last_name, :current_firm, :job_title, :pqe, :university, :degree_classification, :expected_salary, :job_status, :practice_area, :firm_type, :interests, :post_code, :cv)
   end
 end
