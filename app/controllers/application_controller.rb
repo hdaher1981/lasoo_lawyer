@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:account_update, keys: [:lawyer])
     end
 
+    def after_sign_in_path_for(user)
+      users_path(user)
+    end
+
 end

@@ -1,0 +1,33 @@
+.lawyer_details{
+  display: flex;
+  margin-top:20px;
+}
+
+.showbox{
+// margin-top:20px;
+  flex: 60%;
+  padding-left: 20px;
+}
+
+.container_lawyer_show{
+  margin: 0 auto;
+  width: 550px;
+  margin-top: 20px;
+  background:white;
+}
+
+
+.custom-button {
+  display: block !important;
+  margin: 6%;
+}
+
+.buttons_lawyer_show {
+   flex: 40%;
+}
+
+.lawyer-border {
+  border-bottom: 1px solid #F7F7F7;
+  padding: 4%;
+  background: #FFFFFF;
+}
