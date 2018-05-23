@@ -8,6 +8,7 @@
   margin: 10px;
   border-radius: 10px;
   padding: 10px 40px;
+  padding: 19px 30px 15px 30px;
 }
 
 .card-information {
@@ -17,17 +18,17 @@
 .card-info-top {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .card-info-title {
-  margin-right: 60px;
+  flex-basis: 40%;
   p {
     font-weight: 12px;
     color: #818181;
   }
   h4 {
-    margin-bottom: 2px;
+    // margin-bottom: 2px;
   }
 }
 
@@ -36,12 +37,13 @@
   justify-content: flex-start;
   align-items: center;
   .tag {
-    margin-right: 20px;
-    padding: 10px 17px;
+    margin-right: 10px;
+    padding: 7px 15px;
     background-color: #1C144C;
     color: white;
     border-radius: 60px;
-    font-weight: 14px;
+    font-weight: medium;
+    font-size: 15px;
   }
 }
 

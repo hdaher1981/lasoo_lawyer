@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+  protect_from_forgery
+  before_action :authenticate_user!
+
   before_action :configure_permitted_parameters, if: :devise_controller?
 
     def configure_permitted_parameters
@@ -7,6 +10,10 @@ class ApplicationController < ActionController::Base
 
       # For additional in app/views/devise/registrations/edit.html.erb
       devise_parameter_sanitizer.permit(:account_update, keys: [:lawyer])
+    end
+
+    def after_sign_in_path_for(user)
+      users_path(user)
     end
 
 end

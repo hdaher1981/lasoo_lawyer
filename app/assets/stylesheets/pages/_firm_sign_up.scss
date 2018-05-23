@@ -17,10 +17,6 @@
   padding:20px;
 }
 
-// .wrapper_lawyer_new{
-//   background: white;
-//   }
-
 
 .lawyer_new_heading{
   margin: 0 auto;
@@ -29,6 +25,11 @@
 
 
 .wrapper_lawyer_new {
+  margin-top: 20px;
+}
+
+
+.container {
   background-image: url(background);
   object-fit: cover;
   background-repeat: no-repeat center center fixed;
