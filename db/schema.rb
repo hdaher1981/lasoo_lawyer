@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 2018_05_23_150616) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "cv"
     t.index ["user_id"], name: "index_lawyer_infos_on_user_id"
   end
 
