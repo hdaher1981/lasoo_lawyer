@@ -13,5 +13,9 @@
   <%= f.input :firm_type, collection: ["magic circle", "silver circle", "US firm", "Top 30 City"] %>
   <%= f.input :interests %>
   <%= f.input :post_code %>
+  <div class="cv-input">
+    <%= f.input :cv %>
+    <%= f.input :cv_cache, as: :hidden %>
+  </div>
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
