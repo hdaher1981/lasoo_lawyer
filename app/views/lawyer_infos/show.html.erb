@@ -1,24 +1,30 @@
-<h1>Lawyer Information</h1>
+<div class="wrapper_lawyer_show">
+  <div class="container_lawyer_show">
 
-<div class="showbox">
-<ul>
-<li>Email: <%= @lawyerinfo.user.email %></li>
-<li>First Name: <%= @lawyerinfo.first_name %></li>
-<li>Last Name: <%= @lawyerinfo.last_name %></li>
-<li>Current Firm: <%= @lawyerinfo.current_firm %></li>
-<li>Job Title: <%= @lawyerinfo.job_title %></li>
-<li>PQE: <%= @lawyerinfo.pqe %> years</li>
-<li>University: <%= @lawyerinfo.university %></li>
-<li>Degree Classification: <%= @lawyerinfo.degree_classification %>(HONS) </li>
-<li>Expected Salary: £ <%= @lawyerinfo.expected_salary %></li>
-<li>Job status: <%= @lawyerinfo.job_status %></li>
-<li>Practice area: <%= @lawyerinfo.practice_area %></li>
-<li>Target Firm Type: <%= @lawyerinfo.firm_type %></li>
-<li>Interests: <%= @lawyerinfo.interests %></li>
-<li>Post Code: <%= @lawyerinfo.post_code %></li>
-</ul>
+    <div class="lawyer-border"><h1><%= @lawyerinfo.job_title %></h1></div>
+    <div class="lawyer_details">
+      <div class="showbox">
+
+        <p><strong> Email: </strong> <%= @lawyerinfo.user.email %></p>
+        <p><strong> First Name:</strong> <%= @lawyerinfo.first_name %></p>
+        <p> <strong> Last Name:</strong> <%= @lawyerinfo.last_name %></p>
+        <p><strong> Current Firm:</strong> <%= @lawyerinfo.current_firm %></p>
+        <!-- <p><strong> Job Title:</strong> <%= @lawyerinfo.job_title %></p> -->
+        <p><strong> PQE:</strong> <%= @lawyerinfo.pqe %> years</p>
+        <p><strong> University:</strong> <%= @lawyerinfo.university %></p>
+        <p><strong>Degree Classification:</strong> <%= @lawyerinfo.degree_classification %>(HONS) </p>
+        <p><strong> Expected Salary:</strong> £ <%= @lawyerinfo.expected_salary %></p>
+        <p><strong> Job status:</strong> <%= @lawyerinfo.job_status %></p>
+        <p><strong> Practice area:</strong> <%= @lawyerinfo.practice_area %></p>
+        <p><strong> Target Firm Type:</strong> <%= @lawyerinfo.firm_type %></p>
+        <p><strong> Interests:</strong> <%= @lawyerinfo.interests %></p>
+        <p><strong>Post Code:</strong> <%= @lawyerinfo.post_code %></p>
+
+      </div>
+      <div class="buttons_lawyer_show">
+        <%= link_to "Delete", lawyer_info_path(@lawyerinfo), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary custom-button" %>
+        <%= link_to "Edit", edit_lawyer_info_path, class: "btn btn-primary custom-button" %>
+      </div>
+    </div>
+  </div>
 </div>
-
-<p>  <%= link_to "Delete", lawyer_info_path(@lawyerinfo), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary" %></p>
-
-<p>  <%= link_to "Edit", edit_lawyer_info_path, class: "btn btn-primary" %></p>
