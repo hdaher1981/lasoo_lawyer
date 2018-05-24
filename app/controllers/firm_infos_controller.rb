@@ -32,7 +32,8 @@ class FirmInfosController < ApplicationController
   end
 
   def lawyer_info_restricted
-    @lawyer = LawyerInfo.find_by(user_id: params[:id].to_i)
+    @interview = Interview.new
+    @lawyerinfo = LawyerInfo.find(params[:id])
   end
 
   private

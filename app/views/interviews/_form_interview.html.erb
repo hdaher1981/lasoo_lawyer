@@ -1,0 +1,10 @@
+<div class="container-interview">
+  <div class="form-wrapper-interview" style="width: 400px; margin: 0 auto;">
+    <h2>Book an interview</h2>
+
+    <%= simple_form_for(@interview) do |f| %>
+      <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.button :submit, "Go", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
