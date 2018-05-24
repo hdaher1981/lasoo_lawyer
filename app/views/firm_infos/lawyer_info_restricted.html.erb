@@ -1,3 +1,4 @@
+
 <div class="wrapper_lawyer_show_restricted">
   <div class="container_lawyer_show">
 
@@ -5,6 +6,13 @@
     <div class="lawyer_details">
       <div class="showbox">
         <!-- <p><strong> Job Title:</strong> <%= @lawyerinfo.job_title %></p> -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8">
+      <h1> <%= @lawyerinfo.job_title %> </h1>
+        <p><strong> Current Firm:</strong> <%= @lawyerinfo.current_firm %></p>
         <p><strong> PQE:</strong> <%= @lawyerinfo.pqe %> years</p>
         <p><strong> University:</strong> <%= @lawyerinfo.university %></p>
         <p><strong>Degree Classification:</strong> <%= @lawyerinfo.degree_classification %>(HONS) </p>
@@ -19,3 +27,13 @@
     </div>
   </div>
 </div>
+    </div>
+    <div class="col-xs-4">
+      <%= simple_form_for(@interview) do |f| %>
+        <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.button :submit, "Go", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

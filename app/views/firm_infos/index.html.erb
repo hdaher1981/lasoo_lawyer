@@ -1,32 +1,61 @@
 <div class="wrapper">
   <div class="all-container">
-    <h3 class="text-center">Hi <%= current_user.firm_info.first_name%>, there are a total of <span><%= @users.count %> lawyers in your current search</span></h3>
+    <h3 class="text-center">Hi <%= current_user.firm_info.first_name%>, there are a total of <span><%= @lawyer_infos.count %> lawyers in your current search</span></h3>
     <div class="main-container">
       <div class="filter-container">
+
+        <%= form_tag firm_infos_path, method: :get do %>
+
+
+          <select name="practice_area">
+            <option value="">Department</option>
+            <% LawyerInfo::PRACTICE_AREA.each do |info| %>
+               <option value="<%= info %>"><%= info %></option>
+            <% end %>
+          </select>
+
+          <select name="job_status">
+            <option value="">Job status</option>
+            <% LawyerInfo::JOB_STATUS.each do |info| %>
+               <option value="<%= info %>"><%= info %></option>
+            <% end %>
+          </select>
+
+          <select name="pqe">
+            <option value="">PQE</option>
+            <% LawyerInfo::PQE.each do |info| %>
+               <option value="<%= info %>"><%= info %></option>
+            <% end %>
+          </select>
+
+
+          <%= submit_tag %>
+        <% end %>
       </div>
       <div class="cards-container">
-        <% @users.each do |user| %>
-          <% unless user.lawyer_info.nil? %>
+
+        <% @lawyer_infos.each do |lawyer_info| %>
+          <% unless lawyer_info.nil? %>
             <div class="card">
               <div class="card-information">
                 <div class="card-info-top">
                   <div class="card-info-title">
-                    <h4><%= user.lawyer_info.job_title %></h4>
-                    <p><%= user.lawyer_info.practice_area %></p>
+                    <h4><%= lawyer_info.job_title %></h4>
+                    <p><%= lawyer_info.practice_area %></p>
                   </div>
                   <div class="card-info-tags">
-                    <span class="tag"><%= user.lawyer_info.job_status %></span>
-                    <span class="tag">£<%= user.lawyer_info.expected_salary %></span>
+                    <span class="tag"><%= lawyer_info.job_status %></span>
+                    <span class="tag">£<%= lawyer_info.expected_salary %></span>
                   </div>
                 </div>
                 <div class="card-info-bottom">
-                  <span>PQE: <%= user.lawyer_info.pqe %></span>
-                  <span>Current firm: <%= user.lawyer_info.current_firm %></span>
-                  <span>University: <%= user.lawyer_info.university %></span>
+                  <span>PQE: <%= lawyer_info.pqe %></span>
+                  <span>Current firm: <%= lawyer_info.current_firm %></span>
+                  <span>University: <%= lawyer_info.university %></span>
                 </div>
               </div>
               <div class="btn-more-info">
-                <%= link_to "More info" , lawyer_info_restricted_path(user.id), target: :blank %>
+                <%= link_to "More info" , lawyer_info_restricted_path(lawyer_info.user), target: :blank %>
                 <%= image_tag 'right_arrow_white.png', class: "arrow", width: 28, height: 59 %>
               </div>
             </div>

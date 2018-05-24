@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :interviews, only: [:edit, :index, :update, :destroy, :show ]
+  resources :interviews
   resources :lawyer_infos
   get "more_info/:id", to: "firm_infos#lawyer_info_restricted", as: "lawyer_info_restricted"
   resources :firm_infos
