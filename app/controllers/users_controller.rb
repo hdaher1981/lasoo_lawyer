@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
   def index
-    if (current_user.lawyer == false)
-      redirect_to firm_infos_path
-    else
+    if current_user.lawyer
+
       redirect_to lawyer_info_path(current_user)
+    else
+
+      redirect_to firm_infos_path
     end
   end
 
