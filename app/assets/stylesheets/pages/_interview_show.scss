@@ -22,27 +22,7 @@ h3 {
   opacity: 0;
 }
 
-.btn-primary {
-  border-radius: 10px;
-  color: #1C144C;
-  background-color: white;
-  border-style: solid;
-  border-width:3px;
-  border-color: #73F0D6;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  margin-bottom: 10px;
-}
-
-.btn-primary:hover {
-  color: #73F0D6;
-  background-color: white;
-  text-decoration: none;
-  border-color: #73F0D6;
-  opacity: 0.8;
-
-}
-
-.modal-content {
+.interview-modal {
   color: #1C144C;
   background-color: white;
   border-style: solid;
@@ -51,5 +31,30 @@ h3 {
   padding: 20px;
   border-radius: 15px;
 }
+
+//interviews section
+
+.interviews-section {
+  display: flex;
+  text-align: center;
+  list-style-position: center;
+  background-color: white;
+  border-style: solid;
+  border-color: #73F0D6;
+  margin-top: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 15px;
+}
+
+.interview {
+  display: flex;
+  display: inline-block;
+}
+
+.header-interviews {
+  text-align: center;
+}
+
 
 
