@@ -1,0 +1,55 @@
+.sign-in-container h2 {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 10px;
+  color: #1C144C;
+}
+
+h3 {
+  padding: 15px;
+
+}
+
+.interview-requests {
+  text-align: center;
+}
+
+.cv-requests {
+  text-align: center;
+}
+
+.modal-backdrop.in {
+  opacity: 0;
+}
+
+.btn-primary {
+  border-radius: 10px;
+  color: #1C144C;
+  background-color: white;
+  border-style: solid;
+  border-width:3px;
+  border-color: #73F0D6;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.btn-primary:hover {
+  color: #73F0D6;
+  background-color: white;
+  text-decoration: none;
+  border-color: #73F0D6;
+  opacity: 0.8;
+
+}
+
+.modal-content {
+  color: #1C144C;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #73F0D6;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+
