@@ -11,19 +11,19 @@ User.destroy_all
 
 
 lawyer_one = User.create!(email: "gonzalo@eversheds.com", password: "123456", lawyer: true)
-lawyer_info_one = LawyerInfo.create!(first_name: "Gonzalo", last_name: "Dias", job_title: "Mid-Level Associate", pqe: "5", university: "Cambridge", degree_classification: "2.1", expected_salary: 150000, job_status: "Actively looking", practice_area: "Corporate", firm_type: "Top 30 City", interests: "Rugby", post_code: "E1W1LP", current_firm: "Eversheds", user_id: lawyer_one.id)
+lawyer_info_one = LawyerInfo.create!(first_name: "Gonzalo", last_name: "Dias", job_title: "Mid-Level Associate", pqe: 5, university: "Cambridge", degree_classification: "2.1", expected_salary: 150000, job_status: "Actively looking", practice_area: "Corporate", firm_type: "Top 30 City", interests: "Rugby", post_code: "E1W1LP", current_firm: "Eversheds", user_id: lawyer_one.id)
 
 lawyer_two = User.create!(email: "morgan@linklaters.com", password: "123456", lawyer: true)
-lawyer_info_two = LawyerInfo.create!(first_name: "Morgan", last_name: "Krischer", job_title: "Senior Associate", pqe: "10", university: "Oxford", degree_classification: "1st", expected_salary: 200000, job_status: "Actively looking", practice_area: "Finance", firm_type: "Magic Circle", interests: "Rock Climbing", post_code: "E1W1LP", current_firm: "Linklaters", user_id: lawyer_two.id)
+lawyer_info_two = LawyerInfo.create!(first_name: "Morgan", last_name: "Krischer", job_title: "Senior Associate", pqe: 9, university: "Oxford", degree_classification: "1st", expected_salary: 200000, job_status: "Actively looking", practice_area: "Finance", firm_type: "Magic Circle", interests: "Rock Climbing", post_code: "E1W1LP", current_firm: "Linklaters", user_id: lawyer_two.id)
 
 lawyer_three = User.create!(email: "niall@slaughters.com", password: "123456", lawyer: true)
-lawyer_info_three = LawyerInfo.create!(first_name: "Niall", last_name: "Cunningham", job_title: "Junior Associate", pqe: "3", university: "Nottingham", degree_classification: "1st", expected_salary: 200000, job_status: "Could be tempted", practice_area: "Litigation", firm_type: "Magic Circle", interests: "High Altitude Mountaineering", post_code: "E1W1LP", current_firm: "Slaughter and May", user_id: lawyer_three.id)
+lawyer_info_three = LawyerInfo.create!(first_name: "Niall", last_name: "Cunningham", job_title: "Junior Associate", pqe: 9, university: "Nottingham", degree_classification: "1st", expected_salary: 200000, job_status: "Actively looking", practice_area: "Litigation", firm_type: "Magic Circle", interests: "High Altitude Mountaineering", post_code: "E1W1LP", current_firm: "Slaughter and May", user_id: lawyer_three.id)
 
 lawyer_four = User.create!(email: "joice@cc.com", password: "123456", lawyer: true)
-lawyer_info_four = LawyerInfo.create!(first_name: "Alex", last_name: "Joice", job_title: "Senior Associate", pqe: "9", university: "Oxford", degree_classification: "1st", expected_salary: 180000, job_status: "Could be tempted", practice_area: "Corporate", firm_type: "Magic Circle", interests: "Rock Climbing", post_code: "E1W1LP", current_firm: "Clifford Chance", user_id: lawyer_four.id)
+lawyer_info_four = LawyerInfo.create!(first_name: "Alex", last_name: "Joice", job_title: "Senior Associate", pqe: 9, university: "Oxford", degree_classification: "1st", expected_salary: 180000, job_status: "Actively looking", practice_area: "Corporate", firm_type: "Magic Circle", interests: "Rock Climbing", post_code: "E1W1LP", current_firm: "Clifford Chance", user_id: lawyer_four.id)
 
 lawyer_five = User.create!(email: "asia@farrers.com", password: "123456", lawyer: true)
-lawyer_info_five = LawyerInfo.create!(first_name: "Asia", last_name: "Stuerznickel", job_title: "Mid-Level Associate", pqe: "5", university: "Oxford", degree_classification: "1st", expected_salary: 140000, job_status: "Could be tempted", practice_area: "Corporate", firm_type: "Top 30 City", interests: "Sky Diving", post_code: "E1W1LP", current_firm: "Farrers", user_id: lawyer_five.id)
+lawyer_info_five = LawyerInfo.create!(first_name: "Asia", last_name: "Stuerznickel", job_title: "Mid-Level Associate", pqe: 5, university: "Oxford", degree_classification: "1st", expected_salary: 140000, job_status: "Actively looking", practice_area: "Corporate", firm_type: "Top 30 City", interests: "Sky Diving", post_code: "E1W1LP", current_firm: "Farrers", user_id: lawyer_five.id)
 
 
 

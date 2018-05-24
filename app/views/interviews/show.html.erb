@@ -1,98 +1,145 @@
 <div class="sign-in-container" style="background-image: url('<%= image_path 'background.png' %>')">
-  <h2>Interview & CV Requests</h2>
+  <h2>Lawyer Dashboard</h2>
 
-<<div class="list-element">
+  <div class="flex-buttons">
+    <div class="interview-requests">
+      <button type="button" class="btn btn-primary main-button" data-toggle="modal" data-target="#exampleModal">
+        New Interview Request
+      </button>
+    </div>
 
-<div class="interview-requests">
-  <h3>Show Details:</h3>
-  <button type="button" class="btn btn-primary main-button" data-toggle="modal" data-target="#exampleModal">
-    Interview Request
-  </button>
+    <div class="cv-requests">
+      <button type="button" class="btn btn-primary main-button" data-toggle="modal" data-target="#exampleModal2">
+        CV Request
+      </button>
+    </div>
+  </div>
+
+
+
+  <div class="header-interviews">
+    <div class="interviews-section">
+      <h3 id="interview-heading">Scheduled Interviews</h3>
+      <table class="mycontainer">
+        <tbody>
+          <tr>
+            <th scope="col">Contact Name</th>
+            <th scope="col">Company</th>
+            <th scope="col">Position</th>
+            <th scope="col">Date & Time</th>
+            <th scope="col">Status</th>
+          </tr>
+          <tr>
+            <th scope="row">Ernest Shackleton</th>
+            <td><p>Slaughter and May</p></td>
+            <td><p>Junior Associate</p></td>
+            <td><p>24th June 2018</p></td>
+            <td><a class="btn btn-primary main-button" id="sweet-alert-demo2">View</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Donald Campbell</th>
+            <td><p>Clifford Chance</p></td>
+            <td><p>Junior Associate</p></td>
+            <td><p>27th June 2018</p></td>
+            <td><a class="btn btn-primary main-button" id="confirmed"><strong>Confirmed</strong></a></td>
+          </tr>
+          <tr>
+            <th scope="row">Falcon Scott</th>
+            <td><p>Farrers</p></td>
+            <td><p>Mid-Level Associate</p></td>
+            <td><p>23rd June 2018</p></td>
+            <td><a class="btn btn-primary main-button" id="declined">Declined</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+    <div class="header-cv">
+    <div class="interviews-section">
+      <h3 id="interview-heading">CV Requests</h3>
+      <table class="mycontainer">
+        <tbody>
+          <tr>
+            <th scope="col">Contact Name</th>
+            <th scope="col">Company</th>
+            <th scope="col">Position</th>
+            <th scope="col">Status</th>
+          </tr>
+          <tr>
+            <th scope="row">Ernest Shackleton</th>
+            <td><p>Brown Rudnick LLP</p></td>
+            <td><p>Junior Associate</p></td>
+            <td><a class="btn btn-primary main-button" id="declined"><strong>Sent</strong></a></td>
+          </tr>
+          <tr>
+            <th scope="row">Donald Campbell</th>
+            <td><p>Forbes Hare LLP</p></td>
+            <td><p>Junior Associate</p></td>
+            <td><a class="btn btn-primary main-button" id="declined"><strong>Sent</strong></a></td>
+          </tr>
+          <tr>
+            <th scope="row">Falcon Scott</th>
+            <td><p>Farrers</p></td>
+            <td><p>Junior</p></td>
+            <td><a class="btn btn-primary main-button" id="declined">Declined</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
-
 
 <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content interview-modal">
       <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Interview Request</h5>
-          <h1>Linklaters</h1>
-          <h3>Junior Associate</h3>
-          <p>Banking and Finance - Specialising in Derivatives </p>
-          <p>Salary Bracket: £90 - £110k (depending on experience)</p>
-          <h3>Suggested Dates and Times</h3>
-          <h8>Tuesday 26/07/2018 at 10 am</h8> <br/>
-          <h8>Thursday 28/07/2018 at 11 am</h8>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Reject</button>
-          <button type="button" class="btn btn-primary main-button">Accept Interview Request</button>
-        </div>
+        <h5 class="modal-title" id="exampleModalLabel"> New Interview Request</h5>
+        <h1>Linklaters</h1>
+        <h3>Junior Associate</h3>
+        <p>Banking and Finance - Specialising in Derivatives </p>
+        <p>Salary Bracket: £90 - £110k (depending on experience)</p>
+        <h3>Suggested Dates and Times</h3>
+        <h8>Tuesday 26/07/2018 at 10 am</h8> <br/>
+        <h8>Thursday 28/07/2018 at 11 am</h8>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Reject</button>
+        <button type="button" class="btn btn-primary main-button" id="sweet-alert-demo">Accept Interview Request</button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="cv-requests">
-  <button type="button" class="btn btn-primary main-button" data-toggle="modal" data-target="#exampleModal2">
-    CV Request
-  </button>
-</div>
 
 <div class="modal" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content ">
       <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">CV Request</h5>
-          <h1>Linklaters</h1>
-          <h3>Recruiting: Junior Associates</h3>
-          <p>Team: Banking and Finance - Specialising in Derivatives </p>
-          <p>Salary Bracket: £90 - £110k (depending on experience)</p>
-          <h3>Requested Your CV</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Reject</button>
-          <button type="button" class="btn btn-primary main-button">Accept CV Request</button>
-        </div>
+        <h5 class="modal-title" id="exampleModalLabel">CV Request</h5>
+        <h1>Linklaters</h1>
+        <h3>Recruiting: Junior Associates</h3>
+        <p>Team: Banking and Finance - Specialising in Derivatives </p>
+        <p>Salary Bracket: £90 - £110k (depending on experience)</p>
+        <h3>Requested Your CV</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-    </div>
-  </div>
-
-   <div class="header-interviews">
-    <h2> Upcoming Interviews</h2>
-  </div>
-<div class="interviews-section">
-    <div class="mycontainer">
-      <div class="interview">
-        <h3>26/08/2018 | Allen & Ovary | 10 am </h3>
-        <a class="btn btn-primary main-button">See Details</a>
+      <div class="modal-body">
+        ...
       </div>
-      <div class="interview">
-        <h3>01/09/2018 | Slaughter and May | 10 am </h3>
-        <a class="btn btn-primary main-button">See Details</a>
-      </div>
-      <div class="interview">
-        <h3>01/09/2018 | Farrers| 1 pm </h3>
-        <a class="btn btn-primary main-button">See Details</a>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Reject</button>
+        <button type="button" class="btn btn-primary main-button" id="sweet-alert-demo1">Accept CV Request</button>
       </div>
     </div>
   </div>
 </div>
-
-</div>
-
-
-
 
