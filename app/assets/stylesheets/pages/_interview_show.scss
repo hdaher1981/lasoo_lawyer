@@ -18,10 +18,6 @@ h3 {
   text-align: center;
 }
 
-.modal-backdrop.in {
-  opacity: 0;
-}
-
 .interview-modal {
   color: #1C144C;
   background-color: white;
@@ -44,16 +40,60 @@ h3 {
   margin-left: 100px;
   margin-right: 100px;
   border-radius: 15px;
+  color: #1C144C;
 }
 
 .interview {
   display: flex;
-  display: inline-block;
+  // display: inline-block;
 }
 
 .header-interviews {
-  text-align: center;
+  text-align: left;
 }
 
+#declined {
+  opacity: 0.6;
+}
 
+#confirmed {
+  background-color: #73F0D6;
+}
 
+#confirmed:hover {
+  color: white;
+}
+
+.mycontainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.flex-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#interview-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+tbody.tr {
+  margin-left: 10px;
+}
+th {
+  width: 200px;
+}
+td {
+  width: 200px;
+}
+td p {
+  text-align: left;
+}
+td a {
+  float: left;
+}
