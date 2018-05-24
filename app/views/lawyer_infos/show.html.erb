@@ -4,22 +4,35 @@
     <div class="lawyer-border"><h1><%= @lawyerinfo.job_title %></h1></div>
     <div class="lawyer_details">
       <div class="showbox">
-        <p><strong> Email: </strong> <%= @lawyerinfo.user.email %></p>
-        <p><strong> First Name:</strong> <%= @lawyerinfo.first_name %></p>
-        <p> <strong> Last Name:</strong> <%= @lawyerinfo.last_name %></p>
-        <p><strong> Current Firm:</strong> <%= @lawyerinfo.current_firm %></p>
-        <!-- <p><strong> Job Title:</strong> <%= @lawyerinfo.job_title %></p> -->
-        <p><strong> PQE:</strong> <%= @lawyerinfo.pqe %> years</p>
-        <p><strong> University:</strong> <%= @lawyerinfo.university %></p>
-        <p><strong>Degree Classification:</strong> <%= @lawyerinfo.degree_classification %>(HONS) </p>
-        <p><strong> Expected Salary:</strong> £ <%= @lawyerinfo.expected_salary %></p>
-        <p><strong> Job status:</strong> <%= @lawyerinfo.job_status %></p>
-        <p><strong> Practice area:</strong> <%= @lawyerinfo.practice_area %></p>
-        <p><strong> Target Firm Type:</strong> <%= @lawyerinfo.firm_type %></p>
-        <p><strong> Interests:</strong> <%= @lawyerinfo.interests %></p>
-        <p><strong>Post Code:</strong> <%= @lawyerinfo.post_code %></p>
-        <%#= cl_image_tag @lawyerinfo.cv, height: 300, width: 400, crop: :fill, format: :docx %>
-
+        <!-- personal info  -->
+        <div class="sub-info">
+          <p class="subheading"> <strong> Personal information </strong></p>
+          <p><strong> Email: </strong> <%= @lawyerinfo.user.email %></p>
+          <p><strong> First Name:</strong> <%= @lawyerinfo.first_name %></p>
+          <p> <strong> Last Name:</strong> <%= @lawyerinfo.last_name %></p>
+          <p><strong>Post Code:</strong> <%= @lawyerinfo.post_code %></p>
+        </div>
+        <!-- firm info  -->
+        <div class="sub-info">
+          <p class="subheading"> <strong> Firm information </strong></p>
+          <p><strong> Current Firm:</strong> <%= @lawyerinfo.current_firm %></p>
+          <p><strong> PQE:</strong> <%= @lawyerinfo.pqe %> years</p>
+          <p><strong> Practice area:</strong> <%= @lawyerinfo.practice_area %></p>
+        </div>
+        <!-- uni info  -->
+        <div class="sub-info">
+          <p class="subheading"> <strong> University information </strong></p>
+          <p><strong> University:</strong> <%= @lawyerinfo.university %></p>
+          <p><strong>Degree Classification:</strong> <%= @lawyerinfo.degree_classification %>(HONS) </p>
+        </div>
+        <!-- Additional info -->
+        <div class="sub-info">
+          <p class="subheading"> <strong> Additional information </strong></p>
+          <p><strong> Expected Salary:</strong> £ <%= @lawyerinfo.expected_salary %></p>
+          <p><strong> Job status:</strong> <%= @lawyerinfo.job_status %></p>
+          <p><strong> Target Firm Type:</strong> <%= @lawyerinfo.firm_type %></p>
+          <p class="last-p"><strong> Interests:</strong> <%= @lawyerinfo.interests %></p>
+        </div>
         <% if @lawyerinfo.cv.model[:cv] != nil%>
           <iframe src="http://docs.google.com/gview?url=<%= cl_image_path @lawyerinfo.cv %>&embedded=true", width="300px", height="400px"></iframe>
         <% end %>
