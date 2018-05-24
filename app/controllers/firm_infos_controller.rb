@@ -2,7 +2,7 @@ class FirmInfosController < ApplicationController
   before_action :set_firm_info, only: [:show, :destroy]
 
   def index
-    @users = User.where(lawyer: true)
+    @lawyer_infos = LawyerInfo.filter(params)
   end
 
   def show
