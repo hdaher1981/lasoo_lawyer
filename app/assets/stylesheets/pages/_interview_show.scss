@@ -1,0 +1,60 @@
+.sign-in-container h2 {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 10px;
+  color: #1C144C;
+}
+
+h3 {
+  padding: 15px;
+
+}
+
+.interview-requests {
+  text-align: center;
+}
+
+.cv-requests {
+  text-align: center;
+}
+
+.modal-backdrop.in {
+  opacity: 0;
+}
+
+.interview-modal {
+  color: #1C144C;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #73F0D6;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+//interviews section
+
+.interviews-section {
+  display: flex;
+  text-align: center;
+  list-style-position: center;
+  background-color: white;
+  border-style: solid;
+  border-color: #73F0D6;
+  margin-top: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 15px;
+}
+
+.interview {
+  display: flex;
+  display: inline-block;
+}
+
+.header-interviews {
+  text-align: center;
+}
+
+
+

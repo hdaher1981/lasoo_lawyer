@@ -1,5 +1,5 @@
 class LawyerInfosController < ApplicationController
-  before_action :set_lawyerinfo, only: [:show, :edit, :destroy, :update]
+  before_action :set_lawyerinfo, only: [:edit, :destroy, :update]
   def index
   end
 
@@ -7,6 +7,7 @@ class LawyerInfosController < ApplicationController
   end
 
   def show
+    @lawyerinfo = LawyerInfo.find_by(user_id: current_user)
   end
 
   def new
@@ -35,6 +36,7 @@ class LawyerInfosController < ApplicationController
     @lawyerinfo.destroy
     redirect_to lawyer_infos_path, notice: 'Profile was successfully deleted.'
   end
+
 
   private
 
