@@ -2,6 +2,7 @@ class FirmInfosController < ApplicationController
   before_action :set_firm_info, only: [:show, :destroy]
 
   def index
+    @users = User.where(lawyer: true)
   end
 
   def show
@@ -28,6 +29,10 @@ class FirmInfosController < ApplicationController
   end
 
   def destroy
+  end
+
+  def lawyer_info_restricted
+    @lawyer = LawyerInfo.find_by(user_id: params[:id].to_i)
   end
 
   private

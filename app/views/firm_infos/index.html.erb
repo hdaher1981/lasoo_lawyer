@@ -1,1 +1,37 @@
-<h1>hello</h1>
+<div class="wrapper">
+  <div class="all-container">
+    <h3 class="text-center">Hi <%= current_user.firm_info.first_name%>, there are a total of <span><%= @users.count %> lawyers in your current search</span></h3>
+    <div class="main-container">
+      <div class="filter-container">
+      </div>
+      <div class="cards-container">
+        <% @users.each do |user| %>
+          <div class="card">
+            <div class="card-information">
+              <div class="card-info-top">
+                <div class="card-info-title">
+                  <h4><%= user.lawyer_info.job_title %></h4>
+                  <p><%= user.lawyer_info.practice_area %></p>
+                </div>
+                <div class="card-info-tags">
+                  <span class="tag"><%= user.lawyer_info.job_status %></span>
+                  <span class="tag">£<%= user.lawyer_info.expected_salary %></span>
+                </div>
+              </div>
+              <div class="card-info-bottom">
+                <span>PQE: <%= user.lawyer_info.pqe %></span>
+                <span>Current firm: <%= user.lawyer_info.current_firm %></span>
+                <span>University: <%= user.lawyer_info.university %></span>
+              </div>
+            </div>
+            <div class="btn-more-info">
+              <%= link_to "More info" , lawyer_info_restricted_path(user.id), target: :blank %>
+              <%= image_tag 'right_arrow_white.png', class: "arrow", width: 28, height: 59 %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+</div>

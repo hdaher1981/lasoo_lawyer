@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :interviews, only: [:edit, :index, :update, :destroy, :show ]
   resources :lawyer_infos
+  get "more_info/:id", to: "firm_infos#lawyer_info_restricted", as: "lawyer_info_restricted"
   resources :firm_infos
   devise_for :users, controllers: { registrations: "registrations" }
   root to: "pages#home"
