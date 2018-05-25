@@ -3,17 +3,10 @@ class InterviewsController < ApplicationController
   def edit
   end
 
-  def index
-    @interviews = Interview.all
-  end
-
   def update
   end
 
   def destroy
-  end
-
-  def show
   end
 
   # def new
@@ -29,6 +22,14 @@ class InterviewsController < ApplicationController
     else
       raise
     end
+  end
+
+  def lawyer_schedule
+    @interviews = Interview.all
+  end
+
+ def firm_schedule
+    @interviews = Interview.all
   end
 
   private
