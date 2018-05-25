@@ -8,4 +8,6 @@ class RegistrationsController < Devise::RegistrationsController
       new_firm_info_path
     end
   end
+
+
 end
