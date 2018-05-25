@@ -1,37 +1,44 @@
 <div class="wrapper">
   <div class="all-container">
-    <h3 class="text-center">Hi <%= current_user.firm_info.first_name%>, there are a total of <span><%= @lawyer_infos.count %> lawyers in your current search</span></h3>
+    <h3 class="text-center">Hi <%= current_user.firm_info.first_name%>, there's <span><%= pluralize @lawyer_infos.count, "lawyer" %> in your current search.</span> Happy recruiting!</h3>
     <div class="main-container">
-      <div class="filter-container">
+      <!-- <div class="filter-container-parent"> -->
+        <div class="filter-container">
 
-        <%= form_tag firm_infos_path, method: :get do %>
+          <%= form_tag firm_infos_path, method: :get do %>
+
+            <h5 >Practice area</h5 >
+            <select class="filter-box" name="practice_area">
+              <option value="">Department</option>
+              <% LawyerInfo::PRACTICE_AREA.each do |info| %>
+                 <option value="<%= info %>"><%= info %></option>
+              <% end %>
+            </select>
+            <br>
+
+            <h5 class="h5-title">Job status</h5 >
+            <select class="filter-box" name="job_status">
+              <option value="">Job status</option>
+              <% LawyerInfo::JOB_STATUS.each do |info| %>
+                 <option value="<%= info %>"><%= info %></option>
+              <% end %>
+            </select>
+            <br>
+
+            <h5 class="h5-title">Post-qual experience</h5 >
+            <select class="filter-box" name="pqe">
+              <option value="">PQE</option>
+              <% LawyerInfo::PQE.each do |info| %>
+                 <option value="<%= info %>"><%= info %></option>
+              <% end %>
+            </select>
+            <br>
 
 
-          <select name="practice_area">
-            <option value="">Department</option>
-            <% LawyerInfo::PRACTICE_AREA.each do |info| %>
-               <option value="<%= info %>"><%= info %></option>
-            <% end %>
-          </select>
-
-          <select name="job_status">
-            <option value="">Job status</option>
-            <% LawyerInfo::JOB_STATUS.each do |info| %>
-               <option value="<%= info %>"><%= info %></option>
-            <% end %>
-          </select>
-
-          <select name="pqe">
-            <option value="">PQE</option>
-            <% LawyerInfo::PQE.each do |info| %>
-               <option value="<%= info %>"><%= info %></option>
-            <% end %>
-          </select>
-
-
-          <%= submit_tag %>
-        <% end %>
-      </div>
+            <%= submit_tag value="Apply", :class => "filter-button"%>
+          <% end %>
+        </div>
+      <!-- </div> -->
       <div class="cards-container">
 
         <% @lawyer_infos.each do |lawyer_info| %>
@@ -55,7 +62,7 @@
                 </div>
               </div>
               <div class="btn-more-info">
-                <%= link_to "More info" , lawyer_info_restricted_path(lawyer_info.user), target: :blank %>
+                <%= link_to "More info" , lawyer_info_restricted_path(lawyer_info), target: :blank %>
                 <%= image_tag 'right_arrow_white.png', class: "arrow", width: 28, height: 59 %>
               </div>
             </div>

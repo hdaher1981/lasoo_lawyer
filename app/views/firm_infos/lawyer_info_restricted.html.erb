@@ -8,21 +8,21 @@
         <!-- <p><strong> Job Title:</strong> <%= @lawyerinfo.job_title %></p> -->
 
 
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-8">
-        <h1> <%= @lawyerinfo.job_title %> </h1>
-          <p><strong> Current Firm:</strong> <%= @lawyerinfo.current_firm %></p>
-          <p><strong> PQE:</strong> <%= @lawyerinfo.pqe %> years</p>
-          <p><strong> University:</strong> <%= @lawyerinfo.university %></p>
-          <p><strong>Degree Classification:</strong> <%= @lawyerinfo.degree_classification %>(HONS) </p>
-          <p><strong> Expected Salary:</strong> £ <%= @lawyerinfo.expected_salary %></p>
-          <p><strong> Job status:</strong> <%= @lawyerinfo.job_status %></p>
-          <p><strong> Practice area:</strong> <%= @lawyerinfo.practice_area %></p>
-          <p><strong> Target Firm Type:</strong> <%= @lawyerinfo.firm_type %></p>
-          <p><strong> Interests:</strong> <%= @lawyerinfo.interests %></p>
-          <p><strong>Post Code:</strong> <%= @lawyerinfo.post_code %></p>
-          <%#= cl_image_tag @lawyerinfo.cv, height: 300, width: 400, crop: :fill, format: :docx %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8">
+      <h1> <%= @lawyerinfo.job_title %> </h1>
+        <p><strong> PQE:</strong> <%= @lawyerinfo.pqe %> years</p>
+        <p><strong> University:</strong> <%= @lawyerinfo.university %></p>
+        <p><strong>Degree Classification:</strong> <%= @lawyerinfo.degree_classification %>(HONS) </p>
+        <p><strong> Expected Salary:</strong> £ <%= @lawyerinfo.expected_salary %></p>
+        <p><strong> Job status:</strong> <%= @lawyerinfo.job_status %></p>
+        <p><strong> Practice area:</strong> <%= @lawyerinfo.practice_area %></p>
+        <p><strong> Target Firm Type:</strong> <%= @lawyerinfo.firm_type %></p>
+        <p><strong> Interests:</strong> <%= @lawyerinfo.interests %></p>
+        <p><strong>Post Code:</strong> <%= @lawyerinfo.post_code %></p>
+        <%#= cl_image_tag @lawyerinfo.cv, height: 300, width: 400, crop: :fill, format: :docx %>
       </div>
     <div class="col-xs-4">
       <%= simple_form_for(@interview) do |f| %>
@@ -30,10 +30,7 @@
         <%= f.button :submit, "Go", class: "btn btn-primary", id: 'interview_submit' %>
       <% end %>
     </div>
-    </div>
   </div>
 </div>
-    </div>
-  </div>
-</div>
+
 

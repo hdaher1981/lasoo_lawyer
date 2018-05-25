@@ -89,18 +89,6 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
-    kaminari (1.1.1)
-      activesupport (>= 4.1.0)
-      kaminari-actionview (= 1.1.1)
-      kaminari-activerecord (= 1.1.1)
-      kaminari-core (= 1.1.1)
-    kaminari-actionview (1.1.1)
-      actionview
-      kaminari-core (= 1.1.1)
-    kaminari-activerecord (1.1.1)
-      activerecord
-      kaminari-core (= 1.1.1)
-    kaminari-core (1.1.1)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -231,10 +219,6 @@ GEM
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
-    will_filter (5.1.2)
-      kaminari (~> 1.1)
-      rails (~> 5.1)
-      sass (~> 3.5)
 
 PLATFORMS
   ruby
@@ -249,7 +233,6 @@ DEPENDENCIES
   figaro
   font-awesome-sass (~> 5.0.9)
   jbuilder (~> 2.0)
-  kaminari
   listen (~> 3.0.5)
   pg (~> 0.21)
   pry-byebug
@@ -264,7 +247,6 @@ DEPENDENCIES
   uglifier
   web-console (>= 3.3.0)
   webpacker
-  will_filter
 
 RUBY VERSION
    ruby 2.4.4p296
