@@ -1,5 +1,6 @@
 <div class="sign-in-container" style="background-image: url('<%= image_path 'background.png' %>')">
-  <h2>Lawyer Dashboard</h2>
+
+  <h2 class="text-center"><%= current_user.lawyer_info.first_name%>'s Dashboard</h2>
 
   <div class="flex-buttons">
     <div class="interview-requests">
@@ -142,4 +143,6 @@
     </div>
   </div>
 </div>
+
+<!-- SweetAlert run in here -->
 
