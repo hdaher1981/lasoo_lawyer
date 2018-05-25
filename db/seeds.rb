@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+LawyerInfo.destroy_all
+FirmInfo.destroy_all
+User.destroy_all
+
 
 lawyer_one = User.create!(email: "gonzalo@eversheds.com", password: "123456", lawyer: true)
 lawyer_info_one = LawyerInfo.create!(first_name: "Gonzalo", last_name: "Dias", job_title: "Mid-Level Associate", pqe: 5, university: "Cambridge", degree_classification: "2.1", expected_salary: 150000, job_status: "Actively looking", practice_area: "Corporate", firm_type: "Top 30 City", interests: "Rugby", post_code: "E1W1LP", current_firm: "Eversheds", user_id: lawyer_one.id)
