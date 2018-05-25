@@ -4,6 +4,7 @@ class InterviewsController < ApplicationController
   end
 
   def index
+    @interviews = Interview.all
   end
 
   def update
