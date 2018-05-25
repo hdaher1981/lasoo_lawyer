@@ -25,8 +25,8 @@ function bindSweetAlertButtonDemo() {
  if (sweetAlertDemo2) {
    document.getElementById('sweet-alert-demo2').addEventListener('click', () => {
     swal({
-      title: "Slaughter and May have requested your CV?",
-      text: "Would you like to send it to them?",
+      title: "Status - in progress",
+      text: "Ernest Shackleton met John Walker (partner), positive performance, waiting to hear back",
       icon: "success"
     })
   });
