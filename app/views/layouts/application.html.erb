@@ -19,10 +19,10 @@
     <%= yield %>
     <%=  render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
-    <% unless controller_name == "pages" %>
-    <%= javascript_pack_tag 'application' %>
-    <% end %>
+    <% if controller_name == "pages" %>
     <%= javascript_pack_tag 'banner' %>
+    <% end %>
+    <%= javascript_pack_tag 'application' %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
   </body>

@@ -12,7 +12,6 @@
   <div class="row">
     <div class="col-xs-8">
       <h1> <%= @lawyerinfo.job_title %> </h1>
-        <p><strong> Current Firm:</strong> <%= @lawyerinfo.current_firm %></p>
         <p><strong> PQE:</strong> <%= @lawyerinfo.pqe %> years</p>
         <p><strong> University:</strong> <%= @lawyerinfo.university %></p>
         <p><strong>Degree Classification:</strong> <%= @lawyerinfo.degree_classification %>(HONS) </p>
@@ -37,3 +36,67 @@
   </div>
 </div>
 
+<div class="interview-request">
+      <button type="button" class="btn btn-primary main-button" data-toggle="modal" data-target="#exampleModal5">
+        Schedule an Interview
+      </button>
+    </div>
+  </div>
+
+  <div class="cv-request">
+      <button type="button" class="btn btn-primary main-button" data-toggle="modal" data-target="#exampleModal4">
+        Request a CV
+      </button>
+    </div>
+  </div>
+
+  <div class="modal" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content interview-modal">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> New Interview Request</h5>
+        <h1>From: Linklaters</h1>
+        <h3>Junior Associate</h3>
+        <p>Banking and Finance - Specialising in Derivatives </p>
+        <h3>Suggested Interviews Dates and Times</h3>
+        <h8>Tuesday 26/07/2018 at 10 am</h8> <br/>
+        <h8>Thursday 28/07/2018 at 11 am</h8>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Reject</button>
+        <button type="button" class="btn btn-primary main-button" id="sweet-alert-demo">Send Interview Request</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">CV Request</h5>
+        <h1>From: Linklaters</h1>
+        <h3>Recruiting: Junior Associates</h3>
+        <p>Team: Banking and Finance - Specialising in Derivatives </p>
+        <h3>Request a CV</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Reject</button>
+        <button type="button" class="btn btn-primary main-button" id="sweet-alert-demo1">Send CV Request</button>
+      </div>
+    </div>
+  </div>
+</div>
