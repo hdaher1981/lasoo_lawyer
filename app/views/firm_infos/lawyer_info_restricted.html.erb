@@ -31,7 +31,7 @@
     <div class="col-xs-4">
       <%= simple_form_for(@interview) do |f| %>
         <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
-        <%= f.button :submit, "Go", class: "btn btn-primary" %>
+        <%= f.button :submit, "Go", class: "btn btn-primary", id="sweet-alert-demo" %>
       <% end %>
     </div>
   </div>
