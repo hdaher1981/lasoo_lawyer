@@ -1,26 +1,21 @@
 <div class="sign-in-container" style="background-image: url('<%= image_path 'background.png' %>')">
-
-  <h2 class="text-center"><%= current_user.lawyer_info.first_name%>'s Dashboard</h2>
+  <h2>Lawyer Dashboard</h2>
 
   <div class="flex-buttons">
     <div class="interview-requests">
-      <button type="button" class="btn btn-primary main-button" data-toggle="modal" data-target="#exampleModal" id="blue-button">
+      <button type="button" class="btn btn-primary main-button" data-toggle="modal" data-target="#exampleModal">
         New Interview Request
       </button>
     </div>
 
     <div class="cv-requests">
-      <button type="button" class="btn btn-primary main-button" data-toggle="modal" data-target="#exampleModal2" id="blue-button">
+      <button type="button" class="btn btn-primary main-button" data-toggle="modal" data-target="#exampleModal2">
         CV Request
       </button>
     </div>
   </div>
 
-<div class="top-flex-buttons">
-  <a class="btn btn-primary main-button" id="current-status" id="sweet-alert-demo2">Actively Looking</a>
-  <a class="btn btn-primary main-button" id="sweet-alert-demo2">Tempt Me</a>
-  <a class="btn btn-primary main-button" id="sweet-alert-demo2">Not Interested</a>
-</div>
+
 
   <div class="header-interviews">
     <div class="interviews-section">
@@ -39,7 +34,7 @@
             <td><p>Slaughter and May</p></td>
             <td><p>Junior Associate</p></td>
             <td><p>24th June 2018</p></td>
-            <td><a class="btn btn-primary main-button" id="current-status" id="sweet-alert-demo"><strong>View</strong></a></td>
+            <td><a class="btn btn-primary main-button" id="sweet-alert-demo2">View</a></td>
           </tr>
           <tr>
             <th scope="row">Donald Campbell</th>
@@ -147,6 +142,4 @@
     </div>
   </div>
 </div>
-
-<!-- SweetAlert run in here -->
 
