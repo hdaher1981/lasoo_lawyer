@@ -24,7 +24,7 @@ class InterviewsController < ApplicationController
     @interview = Interview.new(interview_params)
     @interview.user = current_user
     if @interview.save
-      redirect_to root_path
+
     else
       raise
     end
