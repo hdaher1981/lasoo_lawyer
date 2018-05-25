@@ -96,3 +96,29 @@ td p {
 td a {
   float: left;
 }
+
+.top-flex-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#current-status {
+  background-color: #73F0D6;
+}
+
+#current-status:hover {
+  color: white;
+}
+
+#blue-button {
+  background-color: #171236;
+  color: white;
+  border: none;
+  opacity: 1.0;
+}
+
+#blue-button:hover {
+  opacity: 0.7;
+}
