@@ -18,7 +18,7 @@ class LawyerInfosController < ApplicationController
     @lawyerinfo = LawyerInfo.new(lawyerinfo_params)
     @lawyerinfo.user = current_user
     if @lawyerinfo.save
-      redirect_to lawyer_info_path(@lawyerinfo)
+      redirect_to lawyer_schedule_path
     else
       render :new
     end
